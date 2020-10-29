@@ -232,7 +232,7 @@
 
 	var isActualNaN = Number.isNaN || function isActualNaN(x) { return x !== x };
 	
-	var isArray = Array.isArray || function isArray(obj) { return ObjectPrototypeToString(obj)==='[object Array]' };
+	var isArray = Array.isArray || function isArray(obj) { return ObjectPrototypeToString.call(obj) === '[object Array]' };
 
 	var is_default_IE11 = !!window.msCrypto;
 
